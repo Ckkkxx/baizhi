@@ -1,0 +1,15 @@
+
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="springboot.springboot.dao.StartAlarmDAO">
+
+
+    <insert id="setStartAlarm"  parameterType="StartAlarm" >
+        INSERT INTO t_startAlarm (devId,uuid,name,addr,text,type,owner,phone,dateTime,imageFile,resId,sign)
+            values (#{devId},#{uuid},
+             #{name},#{addr}, #{text},#{type},#{owner},
+              #{phone}, #{dateTime}, #{imageFile},#{resId},#{sign})
+    </insert>
+
+</mapper>
